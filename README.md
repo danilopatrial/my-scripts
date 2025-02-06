@@ -2,7 +2,7 @@
 
 This folder contains various scripts that I use on a daily basis for automating tasks, data processing, or any other routine processes I work on. These scripts are organized and can be modified or extended based on my needs.
 
-Each module have a helper command and also a readme file for better instructions.
+Each module have a helper command (shown below) and also a readme file for better instructions.
 
 ```bash
 python -m downloads_cleaner --help
