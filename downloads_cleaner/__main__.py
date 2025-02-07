@@ -52,7 +52,10 @@ def argv_parser(argv: list) -> None:
 
     change_file_path.__annotations__ = {"return": ".i.e '--setpaht images my/images/folder/path'"}
 
-    stdout_commands[argv[1]]()
+    try:
+        stdout_commands[argv[1]]()
+    except:
+        return keyNotFoundMessage(argv[1])
 
 
 if len(argv) != 1:
