@@ -11,7 +11,11 @@ def argv_parser(argv: list) -> None:
         print(f'\033[1;31mFileNotFoundError: {file} does NOT exist.\033[0m')
 
     def print_json_config() -> None:
-        system('type "C:\\Users\\Danilo Patrial\\Python\\Scripts\\downloads_cleaner\\folders_paths.json"')
+        with open('downloads_cleaner/folders_paths.json', 'r') as json_file:
+            data: dict = load(json_file)
+            for key, value in data.items():
+                key += ' '
+                print(f'{key.ljust(20, '.')} {value}')
 
     def print_stdout_commands() -> None:
         for key, value in stdout_commands.items():
@@ -48,10 +52,8 @@ def argv_parser(argv: list) -> None:
 
     change_file_path.__annotations__ = {"return": ".i.e '--setpaht images my/images/folder/path'"}
 
-    try:
-        stdout_commands[argv[1]]()
-    except:
-        return keyNotFoundMessage(argv[1])
+    stdout_commands[argv[1]]()
+
 
 if len(argv) != 1:
     argv_parser(argv)
