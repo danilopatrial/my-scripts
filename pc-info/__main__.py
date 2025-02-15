@@ -9,5 +9,8 @@ try:
     elif argv[1] == '--speedtest':
         get_internet_speed()
 
+    elif argv[1] == '--help':
+        print(f'| --speedtest ... get the current internet speed.')
+
 except KeyboardInterrupt:
     exit()
