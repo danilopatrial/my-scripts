@@ -8,8 +8,6 @@ Each module have a helper command (shown below) and also a readme file for bette
 python -m downloads_cleaner --help
 ```
 
-- `downloads_cleaner` - Organizes and cleans files on my downloads folder.
-
 ## License
 
 This repository is licensed under the MIT License.
