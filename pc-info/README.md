@@ -43,7 +43,7 @@ python -m pc-info
 
 Example:
 ```bash
-python -m pc-info --speedtest"
+python -m pc-info --speedtest
 ```
 
 ## Contributing
